@@ -1,1 +1,25 @@
+#monitoria de linux generica via snmp
+define hostgroup {
+	hostgroup_name linux-snmp
+        alias Linux Servers SNMP 
+}
 
+{% for host in groups['linux-snmp'] %}
+define host {
+	use                     linux-server
+	host_name               {{ host }}
+	alias                   {{ host }}
+	address                 {{ host }}
+	hostgroups 		        linux-snmp
+}
+{% endfor %}
+
+# service checks to be applied to the web server
+
+define service{
+        use                     generic-service
+        host_name               class 
+        service_description     Carga De CPU SNMP
+        check_command           check_snmp!{{linux_snmp_pass}}!1.3.6.1.2.1.2.2.1.2! 
+        }
+       
