@@ -2,7 +2,7 @@
 
 #MAIN - NAGIOS
 
-- hosts: nagios_server
+- hosts: salesorder
   remote_user: "{{ ansible_system_user }}"
   roles:
-    - { role: nagios }
+    - { role: nagios}
