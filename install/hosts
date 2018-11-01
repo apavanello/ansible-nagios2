@@ -1,0 +1,13 @@
+#servidor principal do nagios
+[nagios-server]
+127.0.0.1
+
+#Windows servers - colocar nome do servidor para aparecer correto no nagios
+[windows]
+
+#servidores linux genericos - colocar nome do servidor para aparecer correto no nagios
+[servers]
+
+#servidores linux com webservices - colocar nome do servidor para aparecer correto no nagios
+[webservers]
+

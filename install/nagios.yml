@@ -1,0 +1,8 @@
+---
+
+#MAIN - NAGIOS
+
+- hosts: nagios_server
+  remote_user: "{{ ansible_system_user }}"
+  roles:
+    - { role: nagios-server }

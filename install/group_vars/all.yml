@@ -1,0 +1,7 @@
+#VARS
+
+ansible_system_user: root
+
+#Contatos
+admin_name: Alexandre Pavanello
+admin_email: apavanello@localhost
