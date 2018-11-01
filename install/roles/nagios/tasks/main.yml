@@ -1,0 +1,23 @@
+---
+#Role NAGIOS-SERVER
+
+- name: Gerando Templates do Nagios
+  become: true
+  template: src={{ item + ".j2" }}
+            dest=/etc/nagios/conf.d/{{ item }}
+  with_items:
+    - servers.cfg
+    - webservers.cfg
+    - windows.cfg
+  
+- name: Gerando template de contacs
+  become: true
+  template: src={{ item + ".j2" }}
+            dest=/etc/nagios/objects/{{ item }}
+  with_items:
+    - contacts.cfg 
+
+- name: reinicia o nagios
+  systemd:
+      name: nagios 
+      state: reloaded
