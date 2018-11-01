@@ -1,5 +1,5 @@
 #servidor principal do nagios
-[nagios-server]
+[nagios_server]
 127.0.0.1
 
 #Windows servers - colocar nome do servidor para aparecer correto no nagios
