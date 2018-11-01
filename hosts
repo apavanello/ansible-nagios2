@@ -5,8 +5,10 @@
 #Windows servers - colocar nome do servidor para aparecer correto no nagios
 [windows]
 
+
 #servidores linux genericos - colocar nome do servidor para aparecer correto no nagios
 [servers]
+172.16.8.254
 
 #servidores linux com webservices - colocar nome do servidor para aparecer correto no nagios
 [webservers]
