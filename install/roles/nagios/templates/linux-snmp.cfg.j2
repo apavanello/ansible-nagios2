@@ -18,7 +18,7 @@ define host {
 
 define service{
         use                     generic-service
-        host_name               class 
+        hostgroups               class 
         service_description     Carga De CPU SNMP
         check_command           check_snmp!{{linux_snmp_pass}}!1.3.6.1.2.1.2.2.1.2! 
         }
