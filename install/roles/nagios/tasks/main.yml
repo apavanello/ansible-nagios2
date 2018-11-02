@@ -9,6 +9,7 @@
     - servers.cfg
     - webservers.cfg
     - windows.cfg
+    - linux-server-snmp.cfg
   
 - name: Gerando template de contacs
   become: true
